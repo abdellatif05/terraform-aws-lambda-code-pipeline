@@ -161,6 +161,15 @@ resource "aws_iam_role_policy" "codepipeline_policy" {
             "codestar-connections:UseConnection"
         ],
         "Resource": "*"
+    },
+    {
+        "Action": [
+            "appconfig:StartDeployment",
+            "appconfig:GetDeployment",
+            "appconfig:StopDeployment"
+        ],
+        "Resource": "*",
+        "Effect": "Allow"
     }
   ]
 }
